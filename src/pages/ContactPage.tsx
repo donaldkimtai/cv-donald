@@ -51,14 +51,14 @@ export default function ContactPage() {
   const profile = fallbackProfile
 
   return (
-    <div className="container-page py-16 sm:py-24">
+    <div className="container-page py-10 sm:py-14">
       <SectionHeading
         eyebrow="Get in touch"
         title="Let&rsquo;s build something secure"
-        description="Available for freelance, consulting, contract work, and remote opportunities."
+        description="Available for freelance, consulting, contract work, and remote opportunities — security or full-stack development."
       />
 
-      <div className="mt-12 grid gap-10 lg:grid-cols-[1fr_1.4fr]">
+      <div className="mt-8 grid gap-8 lg:grid-cols-[1fr_1.4fr]">
         <aside className="space-y-6">
           <div className="rounded-xl border border-border bg-bg-card p-6">
             <h3 className="font-display text-base font-semibold text-fg">Direct</h3>

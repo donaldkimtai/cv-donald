@@ -72,6 +72,7 @@ export interface Project {
   technologies?: string[]
   liveUrl?: string
   repoUrl?: string
+  visibility?: 'public' | 'private'
   featured?: boolean
   date?: string
   body?: PortableTextBlock[]

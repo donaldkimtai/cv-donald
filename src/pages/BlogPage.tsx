@@ -36,7 +36,7 @@ export default function BlogPage() {
   }, [activeCategory, posts])
 
   return (
-    <div className="container-page py-16 sm:py-24">
+    <div className="container-page py-10 sm:py-14">
       <SectionHeading
         eyebrow="Notes & writeups"
         title="Blog"
@@ -44,7 +44,7 @@ export default function BlogPage() {
       />
 
       {categories.length > 0 && (
-        <div className="mt-8 flex flex-wrap gap-2">
+        <div className="mt-6 flex flex-wrap gap-2">
           <button
             type="button"
             onClick={() => setActiveCategory(null)}

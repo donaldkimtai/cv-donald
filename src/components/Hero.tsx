@@ -7,10 +7,10 @@ export default function Hero({ profile }: { profile: Profile }) {
     <section className="relative overflow-hidden border-b border-border-subtle">
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 -z-10 opacity-50"
+        className="pointer-events-none absolute inset-0 -z-10"
         style={{
           backgroundImage:
-            'radial-gradient(800px 400px at 20% 10%, rgba(0,255,156,0.10), transparent 60%), radial-gradient(600px 300px at 80% 30%, rgba(245,158,11,0.06), transparent 60%)',
+            'radial-gradient(800px 400px at 20% 10%, rgba(4,120,87,0.08), transparent 60%), radial-gradient(600px 300px at 80% 30%, rgba(180,83,9,0.05), transparent 60%)',
         }}
       />
       <div
@@ -18,26 +18,27 @@ export default function Hero({ profile }: { profile: Profile }) {
         className="pointer-events-none absolute inset-0 -z-10 opacity-[0.06]"
         style={{
           backgroundImage:
-            'linear-gradient(to right, rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.5) 1px, transparent 1px)',
+            'linear-gradient(to right, rgba(15,23,42,0.5) 1px, transparent 1px), linear-gradient(to bottom, rgba(15,23,42,0.5) 1px, transparent 1px)',
           backgroundSize: '60px 60px',
           maskImage: 'linear-gradient(to bottom, black, transparent)',
         }}
       />
 
-      <div className="container-page py-20 sm:py-28 lg:py-32">
-        <div className="flex flex-col gap-6">
-          <div className="inline-flex w-fit items-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-3 py-1 text-xs font-medium text-accent">
+      <div className="container-page py-14 sm:py-20 lg:py-24">
+        <div className="flex flex-col gap-5">
+          <div className="inline-flex w-fit items-center gap-2 rounded-full border border-accent/30 bg-accent-soft px-3 py-1 text-xs font-medium text-accent">
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-60" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
             </span>
-            Available for security consulting & freelance
+            Available for security &amp; engineering work
           </div>
 
           <h1 className="text-balance font-display text-4xl font-bold leading-[1.05] tracking-tight text-fg sm:text-5xl lg:text-6xl">
             Hi, I&rsquo;m {profile.name.split(' ')[0]}.
             <br />
-            <span className="text-accent">I break things</span> so you don&rsquo;t get breached.
+            <span className="text-accent">I secure</span> &amp;{' '}
+            <span className="text-accent">build</span> the web.
           </h1>
 
           <p className="max-w-2xl text-lg text-fg-muted sm:text-xl">{profile.tagline}</p>
@@ -54,7 +55,7 @@ export default function Hero({ profile }: { profile: Profile }) {
           <div className="mt-2 flex flex-wrap gap-3">
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 rounded-md bg-accent px-5 py-3 text-sm font-semibold text-bg transition-colors hover:bg-accent-hover"
+              className="inline-flex items-center gap-2 rounded-md bg-accent px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-accent-hover"
             >
               Start a project <ArrowRight size={16} />
             </Link>
