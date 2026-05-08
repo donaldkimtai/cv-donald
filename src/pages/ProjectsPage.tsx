@@ -32,15 +32,15 @@ export default function ProjectsPage() {
   }, [activeTag, projects])
 
   return (
-    <div className="container-page py-16 sm:py-24">
+    <div className="container-page py-10 sm:py-14">
       <SectionHeading
         eyebrow="Selected work"
         title="Projects"
-        description="A mix of security tooling, web apps, and educational builds."
+        description="A mix of security tooling, full-stack web apps, mobile builds, and educational projects."
       />
 
       {allTags.length > 0 && (
-        <div className="mt-8 flex flex-wrap gap-2">
+        <div className="mt-6 flex flex-wrap gap-2">
           <button
             type="button"
             onClick={() => setActiveTag(null)}

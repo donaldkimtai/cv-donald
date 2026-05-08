@@ -63,8 +63,8 @@ export default function AboutPage() {
   }, [])
 
   return (
-    <div className="container-page py-16 sm:py-24">
-      <header className="flex flex-col gap-4">
+    <div className="container-page py-10 sm:py-14">
+      <header className="flex flex-col gap-3">
         <span className="text-sm font-medium uppercase tracking-[0.18em] text-accent">About me</span>
         <h1 className="font-display text-4xl font-bold tracking-tight text-fg sm:text-5xl">
           {profile.name}
@@ -83,14 +83,14 @@ export default function AboutPage() {
         </div>
       </header>
 
-      <section className="mt-12 max-w-3xl space-y-4 text-base leading-relaxed text-fg sm:text-lg">
+      <section className="mt-8 max-w-3xl space-y-4 text-base leading-relaxed text-fg sm:text-lg">
         {profile.bio.map((p, i) => (
           <p key={i}>{p}</p>
         ))}
       </section>
 
       {profile.philosophy && (
-        <figure className="mt-10 max-w-3xl rounded-xl border-l-2 border-accent bg-bg-card p-6">
+        <figure className="mt-6 max-w-3xl rounded-xl border-l-2 border-accent bg-bg-card p-5">
           <Quote size={18} className="text-accent" aria-hidden />
           <blockquote className="mt-2 font-display text-xl italic tracking-tight text-fg">
             {profile.philosophy}
@@ -98,13 +98,13 @@ export default function AboutPage() {
         </figure>
       )}
 
-      <section className="mt-20">
+      <section className="mt-12">
         <SectionHeading
           eyebrow="Tools & tech"
           title="Skills"
           description="Stacks, tools, and frameworks I use day-to-day."
         />
-        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {skills.map((skill) => (
             <article
               key={skill.category + (skill._id ?? '')}
@@ -128,13 +128,13 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="mt-20">
+      <section className="mt-12">
         <SectionHeading
           eyebrow="Career"
           title="Work experience"
           description="Recent roles and what I shipped while I was there."
         />
-        <ol className="relative mt-8 space-y-8 border-l border-border pl-6">
+        <ol className="relative mt-6 space-y-6 border-l border-border pl-6">
           {experience.map((entry) => (
             <li key={(entry._id ?? '') + entry.company} className="relative">
               <span className="absolute -left-[33px] top-1 grid h-6 w-6 place-items-center rounded-full border border-border bg-bg-elev text-accent">
@@ -163,9 +163,9 @@ export default function AboutPage() {
         </ol>
       </section>
 
-      <section className="mt-20">
+      <section className="mt-12">
         <SectionHeading eyebrow="Academic" title="Education" />
-        <ol className="relative mt-8 space-y-8 border-l border-border pl-6">
+        <ol className="relative mt-6 space-y-6 border-l border-border pl-6">
           {education.map((entry) => (
             <li key={(entry._id ?? '') + entry.institution} className="relative">
               <span className="absolute -left-[33px] top-1 grid h-6 w-6 place-items-center rounded-full border border-border bg-bg-elev text-accent">
@@ -188,13 +188,13 @@ export default function AboutPage() {
         </ol>
       </section>
 
-      <section className="mt-20">
+      <section className="mt-12">
         <SectionHeading
           eyebrow="Credentials"
           title="Certifications"
           description="Industry credentials I've earned."
         />
-        <ul className="mt-8 grid gap-3 sm:grid-cols-2">
+        <ul className="mt-6 grid gap-3 sm:grid-cols-2">
           {certs.map((cert) => {
             const inner = (
               <article className="flex items-start gap-3 rounded-xl border border-border bg-bg-card p-5 transition-colors hover:border-accent/40">
@@ -227,7 +227,7 @@ export default function AboutPage() {
         </ul>
       </section>
 
-      <section className="mt-20 rounded-2xl border border-border bg-bg-card p-8 sm:p-10">
+      <section className="mt-12 rounded-2xl border border-border bg-bg-card p-6 sm:p-8">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <h2 className="font-display text-2xl font-semibold tracking-tight text-fg">
@@ -239,7 +239,7 @@ export default function AboutPage() {
           </div>
           <Link
             to="/contact"
-            className="inline-flex w-fit items-center gap-2 rounded-md bg-accent px-5 py-3 text-sm font-semibold text-bg transition-colors hover:bg-accent-hover"
+            className="inline-flex w-fit items-center gap-2 rounded-md bg-accent px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-accent-hover"
           >
             Contact me <ArrowRight size={16} />
           </Link>

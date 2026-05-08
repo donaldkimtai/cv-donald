@@ -10,14 +10,14 @@ import type {
 
 export const fallbackProfile: Profile = {
   name: 'Donald Kimtai',
-  role: 'Security Consultant · Web & API Security Researcher',
+  role: 'Security Consultant · Software Developer · Web & API Security Researcher',
   tagline:
-    'I help organizations protect their digital assets through practical, standards-aligned security work — from web app pentests to API hardening and cloud audits.',
+    'I help organizations protect and ship — from web app pentests and API hardening to building production-ready React, Next.js, and Flutter applications.',
   location: 'Nairobi, Kenya',
   email: 'donaldkimtai623@gmail.com',
   bio: [
-    "Hi, I'm Donald Kimtai — a Security Consultant focused on web application and API security research, based in Nairobi, Kenya. I specialize in identifying, testing, and securing vulnerabilities in web platforms, APIs, and cloud-based services.",
-    'I have a strong foundation in ethical hacking, digital forensics, and penetration testing. I help organizations protect their digital assets through practical, standards-aligned security solutions.',
+    "Hi, I'm Donald Kimtai — a Security Consultant and Software Developer based in Nairobi, Kenya. I split my time between security research (web and API pentesting, secure code review, cloud hardening) and shipping production apps in React, Next.js, and Flutter.",
+    'I have a strong foundation in ethical hacking, digital forensics, and penetration testing — paired with hands-on experience designing and building full-stack web apps and mobile products that real users rely on every day.',
   ],
   philosophy: 'Security isn\u2019t just a toolset — it\u2019s a mindset.',
   socials: [
@@ -56,24 +56,36 @@ export const fallbackSkills: Skill[] = [
     order: 2,
   },
   {
-    category: 'Languages',
-    items: ['Python', 'JavaScript', 'TypeScript', 'C#', 'Bash'],
+    category: 'Software Development',
+    items: [
+      'Full-Stack Web',
+      'Mobile (Flutter)',
+      'REST & GraphQL APIs',
+      'Headless CMS',
+      'Authentication & Auth flows',
+      'Testing & CI/CD',
+    ],
     order: 3,
   },
   {
-    category: 'Cloud & Platforms',
-    items: ['Microsoft Azure', 'GitHub', 'Linux', 'Docker'],
+    category: 'Languages',
+    items: ['Python', 'TypeScript', 'JavaScript', 'Dart', 'C#', 'Bash'],
     order: 4,
   },
   {
     category: 'Frameworks',
-    items: ['.NET', 'Flask', 'React', 'Node.js'],
+    items: ['React', 'Next.js', 'Node.js', 'Flutter', 'Flask', '.NET'],
     order: 5,
+  },
+  {
+    category: 'Cloud & Platforms',
+    items: ['Microsoft Azure', 'Vercel', 'Sanity', 'Firebase', 'GitHub', 'Linux', 'Docker'],
+    order: 6,
   },
   {
     category: 'Compliance',
     items: ['ISO 27001', 'NIST CSF', 'GDPR'],
-    order: 6,
+    order: 7,
   },
 ]
 
@@ -151,27 +163,81 @@ export const fallbackCertifications: CertificationEntry[] = [
 
 export const fallbackProjects: Project[] = [
   {
+    title: 'PataCV — AI Resume Builder',
+    slug: 'patacv',
+    excerpt:
+      'Smart AI resume builder for the Kenyan job market — ATS-optimized templates, AI tailoring, and instant cover letters.',
+    description:
+      'Full-stack SaaS for building ATS-optimized resumes tailored to Kenyan recruiters. AI-powered bullet generation, 10-dimension ATS scoring, cover-letter generator, tiered pricing (Free → Pro), and M-Pesa-friendly checkout. Trusted by 1,200+ professionals.',
+    tags: ['SaaS', 'AI', 'Web Development', 'Career'],
+    technologies: ['Next.js', 'TypeScript', 'AI/LLM', 'Vercel'],
+    visibility: 'private',
+    featured: true,
+    date: '2026-04-20',
+    liveUrl: 'https://patacv.vercel.app/',
+  },
+  {
+    title: 'BodaGo — AI-Powered Mobility',
+    slug: 'bodago',
+    excerpt: 'Cross-platform Flutter app for an AI-powered boda-boda (motorcycle taxi) mobility platform.',
+    description:
+      'A Flutter mobile app powering an AI-driven mobility marketplace tailored for African cities. Real-time ride matching, trip routing, and rider/driver flows.',
+    tags: ['Mobile', 'Flutter', 'Mobility', 'AI'],
+    technologies: ['Flutter', 'Dart', 'Firebase'],
+    visibility: 'public',
+    featured: true,
+    date: '2026-03-27',
+    repoUrl: 'https://github.com/donaldkimtai/BodaGo',
+  },
+  {
+    title: 'Flutter Kenya eKYC',
+    slug: 'flutter-kenya-ekyc',
+    excerpt:
+      'Modern offline Kenyan identity engine using Google ML Kit and MobileFaceNet for on-device verification.',
+    description:
+      'A Flutter package for offline Kenyan eKYC: ID document OCR, liveness detection, and face matching using Google ML Kit + MobileFaceNet — all on-device with no network calls required.',
+    tags: ['Mobile', 'Flutter', 'Identity', 'ML'],
+    technologies: ['Flutter', 'Dart', 'Google ML Kit', 'MobileFaceNet'],
+    visibility: 'public',
+    featured: true,
+    date: '2026-03-13',
+    repoUrl: 'https://github.com/donaldkimtai/flutter_kenya_ekyc',
+  },
+  {
+    title: 'Beats by Kode',
+    slug: 'beatsbykode',
+    excerpt: 'Premium producer portfolio built with Next.js and Sanity CMS.',
+    description:
+      'A premium music producer portfolio website. Server-rendered Next.js frontend with content managed in Sanity Studio — beat catalog, artist roster, and contact flows.',
+    tags: ['Web Development', 'Next.js', 'Sanity'],
+    technologies: ['Next.js', 'TypeScript', 'Sanity', 'Tailwind'],
+    visibility: 'public',
+    date: '2026-04-27',
+    repoUrl: 'https://github.com/donaldkimtai/beatsbykode',
+  },
+  {
     title: 'Fibonacci-Based File Encryption System',
     slug: 'fibonacci-encryption',
-    excerpt: 'Flask web app that encrypts uploaded files using Fibonacci-generated keys and ChaCha encryption.',
+    excerpt:
+      'Flask web app that encrypts uploaded files using Fibonacci-generated keys and ChaCha20 encryption.',
     description:
       'A Flask-based web app that uses the Fibonacci sequence and ChaCha20 to securely encrypt and decrypt user files, with registration, key storage, and audit logging.',
     tags: ['Encryption', 'Flask', 'Cybersecurity'],
     technologies: ['Python', 'Flask', 'SQLite', 'HTML/CSS', 'JavaScript'],
-    featured: true,
+    visibility: 'private',
     date: '2024-04-28',
   },
   {
     title: 'GitHub Secret Scraper',
     slug: 'github-secret-scraper',
-    excerpt: 'Python tool that scans public GitHub repositories for leaked secrets like API keys and tokens.',
+    excerpt:
+      'Python tool that scans public GitHub repositories for leaked secrets like API keys and tokens.',
     description:
       'A Python script using regex and the GitHub API to identify exposed API keys, passwords, and tokens in public repositories. Logs findings, alerts on critical leaks, and categorizes severity.',
     tags: ['Python', 'Security Automation', 'GitHub'],
     technologies: ['Python', 'GitHub API', 'Regex'],
-    featured: true,
+    visibility: 'private',
     date: '2024-05-10',
-    repoUrl: 'https://github.com/donaldkimtai',
   },
   {
     title: 'Web Application Security Lab — TryHackMe',
@@ -181,7 +247,6 @@ export const fallbackProjects: Project[] = [
       'Completed an interactive lab covering SQL injection, XSS, command injection, and session flaws. Used Burp Suite and bWAPP to identify and mitigate OWASP Top 10 vulnerabilities.',
     tags: ['Web Security', 'TryHackMe', 'OWASP'],
     technologies: ['Burp Suite', 'bWAPP', 'OWASP Top 10'],
-    featured: true,
     date: '2024-06-01',
     liveUrl: 'https://tryhackme.com/p/54ad0n',
   },

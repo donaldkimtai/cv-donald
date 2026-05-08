@@ -13,7 +13,7 @@ export default function NotFoundPage() {
       </p>
       <Link
         to="/"
-        className="mt-8 inline-flex items-center gap-2 rounded-md bg-accent px-5 py-3 text-sm font-semibold text-bg transition-colors hover:bg-accent-hover"
+        className="mt-8 inline-flex items-center gap-2 rounded-md bg-accent px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-accent-hover"
       >
         <ArrowLeft size={14} /> Back home
       </Link>

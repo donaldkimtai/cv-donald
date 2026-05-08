@@ -16,14 +16,14 @@ export default function Footer() {
   const socials = fallbackProfile.socials
 
   return (
-    <footer className="mt-24 border-t border-border bg-bg-elev/40">
-      <div className="container-page flex flex-col gap-6 py-10 md:flex-row md:items-center md:justify-between">
+    <footer className="mt-16 border-t border-border bg-bg-elev/40">
+      <div className="container-page flex flex-col gap-6 py-8 md:flex-row md:items-center md:justify-between">
         <div className="flex flex-col gap-1">
           <p className="font-display text-base font-semibold text-fg">
             donald<span className="text-accent">.</span>kimtai
           </p>
           <p className="text-sm text-fg-muted">
-            Security Consultant · Web & API Security Researcher · Nairobi, Kenya
+            Security Consultant · Software Developer · Nairobi, Kenya
           </p>
         </div>
 

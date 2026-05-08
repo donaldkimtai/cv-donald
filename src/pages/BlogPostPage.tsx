@@ -104,20 +104,20 @@ export default function BlogPostPage() {
 
   if (loading) {
     return (
-      <div className="container-page py-24 text-center text-fg-muted">Loading post…</div>
+      <div className="container-page py-16 text-center text-fg-muted">Loading post…</div>
     )
   }
 
   if (!post) {
     return (
-      <div className="container-page py-24 text-center">
+      <div className="container-page py-16 text-center">
         <h1 className="font-display text-3xl font-bold text-fg">Post not found</h1>
         <p className="mt-3 text-fg-muted">
           The post you&rsquo;re looking for doesn&rsquo;t exist or has been moved.
         </p>
         <Link
           to="/blog"
-          className="mt-6 inline-flex items-center gap-2 rounded-md bg-accent px-5 py-3 text-sm font-semibold text-bg"
+          className="mt-6 inline-flex items-center gap-2 rounded-md bg-accent px-5 py-3 text-sm font-semibold text-white"
         >
           <ArrowLeft size={14} /> Back to blog
         </Link>
@@ -129,7 +129,7 @@ export default function BlogPostPage() {
     post.coverImageUrl ?? urlFor(post.coverImage)?.width(1600).height(800).url() ?? null
 
   return (
-    <article className="container-page py-12 sm:py-16">
+    <article className="container-page py-10 sm:py-14">
       <Link
         to="/blog"
         className="inline-flex items-center gap-1.5 text-sm font-medium text-fg-muted transition-colors hover:text-accent"
@@ -137,7 +137,7 @@ export default function BlogPostPage() {
         <ArrowLeft size={14} /> All posts
       </Link>
 
-      <header className="mt-8 max-w-3xl">
+      <header className="mt-6 max-w-3xl">
         {post.categories && post.categories.length > 0 && (
           <ul className="flex flex-wrap gap-2">
             {post.categories.map((c) => (

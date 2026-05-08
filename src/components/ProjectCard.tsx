@@ -1,4 +1,4 @@
-import { ArrowUpRight, Github } from 'lucide-react'
+import { ArrowUpRight, Github, Lock, Unlock } from 'lucide-react'
 import type { Project } from '../lib/types'
 import { urlFor } from '../lib/sanity'
 
@@ -21,11 +21,30 @@ export default function ProjectCard({ project }: { project: Project }) {
             <span className="font-mono text-sm">{project.tags?.[0] ?? 'project'}</span>
           </div>
         )}
-        {project.featured && (
-          <span className="absolute left-3 top-3 rounded-full border border-accent/40 bg-bg/80 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-accent backdrop-blur">
-            Featured
-          </span>
-        )}
+        <div className="absolute left-3 top-3 flex items-center gap-2">
+          {project.featured && (
+            <span className="rounded-full border border-accent/40 bg-bg/85 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-accent backdrop-blur">
+              Featured
+            </span>
+          )}
+          {project.visibility && (
+            <span
+              className={`inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider backdrop-blur ${
+                project.visibility === 'public'
+                  ? 'border-accent/40 bg-accent-soft text-accent'
+                  : 'border-amber/40 bg-bg/85 text-amber'
+              }`}
+              aria-label={`${project.visibility} project`}
+            >
+              {project.visibility === 'public' ? (
+                <Unlock size={10} aria-hidden />
+              ) : (
+                <Lock size={10} aria-hidden />
+              )}
+              {project.visibility}
+            </span>
+          )}
+        </div>
       </div>
 
       <div className="flex flex-1 flex-col gap-3 p-5">
@@ -58,7 +77,7 @@ export default function ProjectCard({ project }: { project: Project }) {
               View <ArrowUpRight size={14} />
             </a>
           )}
-          {project.repoUrl && (
+          {project.repoUrl ? (
             <a
               href={project.repoUrl}
               target="_blank"
@@ -68,7 +87,14 @@ export default function ProjectCard({ project }: { project: Project }) {
             >
               <Github size={14} /> Code
             </a>
-          )}
+          ) : project.visibility === 'private' ? (
+            <span
+              className="inline-flex items-center gap-1 text-fg-dim"
+              title="Source code is private"
+            >
+              <Lock size={12} /> Private repo
+            </span>
+          ) : null}
         </div>
       </div>
     </article>
