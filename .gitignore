@@ -22,36 +22,20 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Vercel
 .vercel
+
+# Env
 .env
 .env.local
-# Claude Code (memory, settings, plans, skills — all private)
+.env*.local
+
+# Claude / agent memory
 CLAUDE.md
 **/CLAUDE.md
 **/.claude/
-chatbot/audit/
 
-# Private negotiation/audit files
-*santiferirepair*
-plan-*.md
-audit-*.md
-
-# Backups and drafts
-backup/
-_backup_*/
-*.bak
-linkedin-post.md
-.env*.local
-.env.vercel
-.second-brain.yaml
-
-# Test artifacts
-test-results/
-chatbot/.playwright-mcp/
-
-# Stray screenshots in root
-/*.png
-
-# RAG
-.rag-hashes.json
-scripts/chunks/
+# Sanity build output
+sanity/dist
+sanity/.sanity
