@@ -16,7 +16,7 @@ Nairobi, Kenya
 
 > _"Security is not a checklist — it's a mindset."_
 
-A modern, content-driven portfolio for Donald Kimtai's cybersecurity practice — pentesting, secure code review, cloud hardening, and security awareness. Built as a static SPA with a headless **Sanity** CMS so content (projects, posts, experience, certifications) can be edited without redeploying.
+A modern, content-driven portfolio. Built as a static SPA with a headless **Sanity** CMS so content (projects, posts, experience, certifications) can be edited without redeploying.
 
 ---
 
